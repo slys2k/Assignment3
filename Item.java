@@ -31,6 +31,7 @@ public class Item
 	// Constants
 	
 	/** There are no constants yet defined for this class.
+	  */
 	
 	// Constructors
 
