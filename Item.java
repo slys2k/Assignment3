@@ -68,7 +68,7 @@ public class Item
 	/** Assigns a new weight to the item in the cart
 	  * @param newWeight The desired weight of the item in the cart
 	  */
-	public void setWeight(float newOwner ) { itemWeight = newWeight; }
+	public void setWeight(float newWeight ) { itemWeight = newWeight; }
 
 	// Access Methods
 
