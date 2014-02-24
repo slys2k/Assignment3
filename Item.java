@@ -27,6 +27,8 @@ public class BankAccount
 	
 	// Constants
 	
+	/** There are no constants yet defined for this class.
+	
 	// Constructors
 
 	/** Construct an Item with the following initial values.
@@ -70,22 +72,22 @@ public class BankAccount
 	/** Determines the name of the current item.
 	  * @return The the name of the object. 
 	  */
-	public double getName( ) { return itemName; }
+	public String getName( ) { return itemName; }
 	
 	/** Gets the price associated with one of these items.
 	  * @return The price per each.
 	  */
-	public int getPrice( ) { return itemPrice; }
+	public float getPrice( ) { return itemPrice; }
 	
 	/** Gets the quantity of this item currently in the cart.
 	  * @return The item quantity.
 	  */
-	public String getQuantity( ) { return itemQuantity; }
+	public int getQuantity( ) { return itemQuantity; }
 
 	/** Determines the weight assigned to one of these items.
 	  * @return The weight per each. 
 	  */
-	public char getWeight() { return itemWeight; }
+	public float getWeight() { return itemWeight; }
 		
 	// Other Methods
 	
