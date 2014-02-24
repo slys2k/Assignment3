@@ -7,11 +7,12 @@ package Assignment3;
   * 
   * @author K. Cyr, J. Ngo
   */
-public class BankAccount 
+public class Item 
 {   
 	// Data Fields (instance variables)
 	
-	/** A string that identifies the item being purchased. */
+	/** A string that identifies the item being purchased. 
+	  */
 	protected String itemName;
 	
 	/** A float variable to represent the price of one unit of the item to be 
@@ -19,10 +20,12 @@ public class BankAccount
 	  */
 	protected float itemPrice; 
 	
-	/** This integer is how many of this item that will be purchased. */
+	/** This integer is how many of this item that will be purchased. 
+	  */
 	protected int itemQuantity;
 
-	/** The weight of a single unit of this particular item. */
+	/** The weight of a single unit of this particular item.
+	  */
 	protected float itemWeight;
 	
 	// Constants
