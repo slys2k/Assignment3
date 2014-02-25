@@ -68,13 +68,52 @@ public class Electronics extends Item
 	public boolean getFragile() { return itemFragile; }
 
 	// Other Methods
-	
-	/* These are all other methods that do not fit in the GET and SET suite of
-	 * Modifier and Access methods defined above
-	 */
 
-	// Variables, constructors etc. here.
-	
-	//Implement calculate price/print methods as necessary
+	/** Determines the cost associated with shipping this item.
+	  * @return The shipping cost. 
+	  */
+	float calcShipping()
+	{
+		float shipping_cost = 0;
+		
+		// Insert Calculation Here
+		
+		shipping_cost = ((SHIPPING_RATE * weight) * quantity);
 
+		return shipping_cost;
+	}
+	
+	/** Determines the cost associated with sales tax for this item.
+	  * @return The amount of sales tax. 
+	  */
+	float calcTax()
+	{
+		float tax_cost = 0;
+		
+		// Insert Calculation Here
+		
+		return tax_cost;
+	}
+	
+	/** Determines the entire cost of this item.
+	  * @return The final price for this item.
+	  */
+	float calcPrice () 
+	{
+		float final_price = 0;
+		
+		// Insert Calculation Here
+		
+		final_price = (quantity * price) + tax + shipping;
+
+		return final_price;
+	}
+
+	/** Determines the weight assigned to one of these items.
+	  * @return The weight per each. 
+	  */
+	void printAttributes () 
+	{
+		//Print all applicable attributes of this class
+	}
 }

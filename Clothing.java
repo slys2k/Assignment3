@@ -51,22 +51,59 @@ public class Clothing extends Item
 	  */
 
 	// Other Methods
+
+	/** Determines the cost associated with shipping this item.
+	  * @return The shipping cost. 
+	  */
+	float calcShipping()
+	{
+		float shipping_cost = 0;
+
+		float weight = getWeight();
+		int quantity = getQuantity();
+
+		shipping_cost = ((SHIPPING_RATE * weight) * quantity);
+
+		return shipping_cost;
+	}
 	
-	/* These are all other methods that do not fit in the GET and SET suite of
-	 * Modifier and Access methods defined above
-	 */
+	/** Determines the cost associated with sales tax for this item.
+	  * @return The amount of sales tax. 
+	  */
+	float calcTax()
+	{
+		float tax_cost = 0;
+
+		int quantity = getQuantity();
+		float price = getPrice();
+
+		tax_cost = ((quantity * price) * TAX_RATE);
+
+		return tax_cost;
+	}
 	
-	float calculatePrice () 
+	/** Determines the entire cost of this item.
+	  * @return The final price for this item.
+	  */
+	float calcPrice () 
 	{
 		float final_price = 0;
-		// Insert price calculation here
+
+		float tax = calcTax();
+		float shipping = calcShipping();
+		int quantity = getQuantity();
+		float price = getPrice();
+		
+		final_price = (quantity * price) + tax + shipping;
+
 		return final_price;
 	}
-	
+
+	/** Determines the weight assigned to one of these items.
+	  * @return The weight per each. 
+	  */
 	void printAttributes () 
 	{
-		//Print all applicable attributes of this sub-class
+		//Print all applicable attributes of this class
 	}
-	
-
 }
