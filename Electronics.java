@@ -21,7 +21,7 @@ public class Electronics extends Item
 
 	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
-	private static final int TAX_RATE = .10;
+	private static final float TAX_RATE = .10;
 	
 	/** Current shipping rate.
 	  */
@@ -29,7 +29,7 @@ public class Electronics extends Item
 	  
 	/** Current premium shipping rate, in decimal format (e.g. 20% = .20)
 	  */
-	private static final int PREMIUM_SHIPPING = .20;
+	private static final float PREMIUM_SHIPPING = .20;
 	  
    // Constructors
 
