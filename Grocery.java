@@ -30,7 +30,7 @@ public class Grocery extends Item
 	  * @param weight The weight of a single unit of this item.
 	  * @param perishable True if the item is perishable.
 	  */
-	public Item(String name, 
+	public Grocery(String name, 
 					float price, 
 					int quantity, 
 					float weight, 
