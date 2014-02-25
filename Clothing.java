@@ -27,7 +27,7 @@ public class Clothing extends Item
 	  * @param quantity How many of these items will be purchased.
 	  * @param weight The weight of a single unit of this item.
 	  */
-	public Item(String name, 
+	public Clothing(String name, 
 					float price, 
 					int quantity, 
 					float weight, 
