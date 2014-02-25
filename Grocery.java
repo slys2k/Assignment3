@@ -20,6 +20,7 @@ public class Grocery extends Item
 	  */
 	
    // Constructors
+
 	/** Construct an Item with the following initial values.
 	  * @param name The name of the item.
 	  * @param price The price assigned to one unit of this item.
@@ -37,69 +38,30 @@ public class Grocery extends Item
 		perishableGrocery = perishable;
 	}
 	
-  /** Construct a newClass with this value specified
-	  * @param firstDataField Description of the first data field
-	  */
-	public newClass(String firstParam)
-	{
-		firstDataField = firstParam;
-	}
-	
-   /** Construct a newClass with this value specified
-	  * @param firstDataField Description of the first data field
-	  */
-	public newClass(int secondParam)
-	{
-		secondDataField = secondParam;
-	}
-	
-	/** Construct a newClass with default values
-	  */
-	public newClass()
-	{
-		firstDataField = null;
-		secondDataField = 0;
-	}
-
 	// Modifier Methods
 	
-	/** Sets the firstDataField field.
-	  * @param firstParam 
+	/** Designates the grocery item as perishable or not.
+	  * @param perishable True is the grocery item is perishable.
 	  */
-	public void setFirstDataField(String firstParam)
+	public void setPerishableGrocery(boolean perishable)
 	{
-		firstDataField = firstParam;
+		perishableGrocery = perishable;
 	}
 
-	/** Sets the secondDataField field.
-	  * @param secondParam 
-	  */
-	public void setSecondDataField(int secondParam)
-	{
-		secondDataField = secondParam;
-	}
-	
 	// Access Methods
 	
-	/** Gets the value of firstDataField
-	  * @return the value of firstDataField as a String
+	/** Checks the current setting of the perishable flag.
+	  * @return The current value of the perishableGrocery
 	  */
-	public Sting getFirstDataField() { return firstDataField; }
-	
-	/** Gets the value of secondDataField
-	  * @return the value of secondDataField as an int
-	  */
-	public int getSecondDataField() { return secondDataField; }
-	
+	public boolean getPerishableGrocery() { return perishableGrocery; }
+
 	// Other Methods
 	
 	/* These are all other methods that do not fit in the GET and SET suite of
 	 * Modifier and Access methods defined above
 	 */
 
-	//variables, constructor here
-	
-	//override calculatePrice() if necessary; Implement print methods as necessary	
+	 //override calculatePrice() if necessary; Implement print methods as necessary	
 	// Only re-implement stuff you cannot get from the superclass (Item)
 	
 }
