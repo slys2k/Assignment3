@@ -61,15 +61,18 @@ public class Electronics extends Item
 	  * @param quantity How many of these items will be purchased.
 	  * @param weight The weight of a single unit of this item.
 	  * @param fragile True if the item is fragile.
+	  * @param taxable True if the item is taxable.
 	  */
 	public Electronics(String name, 
 					float price, 
 					int quantity, 
 					float weight, 
-					boolean fragile)
+					boolean fragile,
+					boolean taxable)
 	{
 		super(name, price, quantity, weight);
 		itemFragile = fragile;
+		itemTaxable = taxable;
 	}
 	
 	// Modifier Methods
@@ -97,6 +100,11 @@ public class Electronics extends Item
 	  */
 	public boolean getFragile() { return itemFragile; }
 
+	/** Checks the current setting of the taxable flag.
+	  * @return The current value of itemTaxable.
+	  */
+	public boolean getTaxable() { return itemTaxable; }
+
 	// Other Methods
 
 	/** Determines the cost associated with shipping this item.
@@ -106,7 +114,7 @@ public class Electronics extends Item
 	{
 		float shipping_cost = 0;
 		
-		boolean fragile = getFragile);
+		boolean fragile = getFragile();
 		float weight = getWeight();
 		int quantity = getQuantity();
 		
