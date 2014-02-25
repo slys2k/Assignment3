@@ -26,12 +26,28 @@ public class A3Driver
 			
 			for (String s = reader.readLine(); s != null; s = reader.readLine()) 
 			{
-				// parse input, take appropriate actions.
-				
+				// parse input, get first portion
+			
+				switch(operation) // switch operations will further parse string s
+										// to check for validity
+				{
+					case 'I': // insert
+						break;
+					case 'S': // search
+						break;
+					case 'D': // delete
+						break;
+					case 'U': // update
+						break;
+					case 'P': // print
+						break;
+					default:
+						error(); // default on the switch is an error because falling 
+									// through the switch indicates that the first part 
+									// of the input line was incorrect
+
+				}
 				// get the first part of the line - use as a switch
-				// default on the switch is an error because falling through the 
-				// switch indicates that the first part of the input line was 
-				// incorrect
 				
 				// each switch statement will handle the individual command
 				
