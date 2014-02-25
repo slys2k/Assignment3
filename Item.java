@@ -32,7 +32,7 @@ public class Item
 	
 	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
-	private static final int TAX_RATE = .10;
+	private static final float TAX_RATE = .10;
 	
 	/** Current shipping rate.
 	  */
