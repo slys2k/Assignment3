@@ -41,7 +41,10 @@ public class Item
 	  * @param quantity How many of these items will be purchased.
 	  * @param weight The weight of a single unit of this item.
 	  */
-	public Item(String name, float price, int quantity, float weight)
+	public Item(String name, 
+					float price, 
+					int quantity, 
+					float weight)
 	{
 		itemName = name;
 		itemPrice = price;
