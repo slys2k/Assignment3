@@ -14,7 +14,7 @@ public class Grocery extends Item
    /** This is a boolean flag set to indicate that the grocery item is a 
 	  * perishable good.
 	  */
-   private boolean perishableGrocery;
+   private boolean itemPerishable;
    
    // Constants
 	
@@ -37,7 +37,7 @@ public class Grocery extends Item
 					boolean perishable)
 	{
 		super(name, price, quantity, weight);
-		perishableGrocery = perishable;
+		itemPerishable = perishable;
 	}
 	
 	// Modifier Methods
@@ -45,9 +45,9 @@ public class Grocery extends Item
 	/** Designates the grocery item as perishable or not.
 	  * @param perishable True is the grocery item is perishable.
 	  */
-	public void setPerishableGrocery(boolean perishable)
+	public void setItemPerishable(boolean perishable)
 	{
-		perishableGrocery = perishable;
+		itemPerishable = perishable;
 	}
 
 	// Access Methods
@@ -55,7 +55,7 @@ public class Grocery extends Item
 	/** Checks the current setting of the perishable flag.
 	  * @return The current value of the perishableGrocery
 	  */
-	public boolean getPerishableGrocery() { return perishableGrocery; }
+	public boolean getItemPerishable() { return itemPerishable; }
 
 	// Other Methods
 	
