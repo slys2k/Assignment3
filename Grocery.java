@@ -1,8 +1,10 @@
 package Assignment3;
 
 /** This class represents a derived subclass from the Item base-class. The 
-  * purpose of this class is to be able to mark items as perishable and adjust
-  * shipping and tax rates appropriately for such perishable goods.
+  * purpose of this class is to be able to mark grocery items as perishable and 
+  * adjust shipping rates appropriately for such perishable goods. This class
+  * will also ensure no sales tax is calculated for grocery items.
+  *
   * @author J. Ngo and K. Cyr
   */
 public class Grocery extends Item
