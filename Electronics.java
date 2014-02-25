@@ -31,7 +31,7 @@ public class Electronics extends Item
 	  * @param weight The weight of a single unit of this item.
 	  * @param fragile True if the item is fragile.
 	  */
-	public Item(String name, 
+	public Electronics(String name, 
 					float price, 
 					int quantity, 
 					float weight, 
@@ -46,7 +46,7 @@ public class Electronics extends Item
 	/** Designates the electronics item as fragile or not.
 	  * @param fragile True is the electronics item is fragile.
 	  */
-	public void setItemFragile(boolean fragile)
+	public void setFragile(boolean fragile)
 	{
 		itemFragile = fragile;
 	}
@@ -56,7 +56,7 @@ public class Electronics extends Item
 	/** Checks the current setting of the fragile flag.
 	  * @return The current value of itemFragile.
 	  */
-	public boolean getItemFragile() { return itemFragile; }
+	public boolean getFragile() { return itemFragile; }
 
 	// Other Methods
 	
