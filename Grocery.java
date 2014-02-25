@@ -17,10 +17,19 @@ public class Grocery extends Item
    private boolean itemPerishable;
    
    // Constants
-	
-	/** There are no constants yet defined for this class.
+
+	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
+	private static final int TAX_RATE = .10;
 	
+	/** Current shipping rate.
+	  */
+	private static final int SHIPPING_RATE = 20;
+	  
+	/** Current premium shipping rate, in decimal format (e.g. 20% = .20)
+	  */
+	private static final int PREMIUM_SHIPPING = .20;
+	  
    // Constructors
 
 	/** Construct an grocery item with the following initial values.
