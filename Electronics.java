@@ -8,6 +8,23 @@ package Assignment3;
   *
   * @author J. Ngo and K. Cyr
   */
+    
+  /*####################*
+ 	*    Electronics		*
+	*####################*
+	*  -itemFragile		*	additional data field
+	*	-itemTaxable		*	additional data field
+	*####################*
+	*	-setFragile			*	new method
+	*	-setTaxable			*	new method
+	*	-getFragile			*	new method
+	*	-getTaxable			*	new method
+	*	-calcShipping		*	overrides Item method
+	*	-calcTax				*	overrides Item method
+	*	-calcPrice			*	overrides Item method
+	*	-printAttributes	*	overrides Item method
+	*####################*/
+	
 public class Electronics extends Item
 {
    // Data Fields
@@ -63,6 +80,14 @@ public class Electronics extends Item
 	public void setFragile(boolean fragile)
 	{
 		itemFragile = fragile;
+	}
+
+	/** Designates the electronics item as taxable or not.
+	  * @param taxable True is the electronics item is taxable.
+	  */
+	public void setTaxable(boolean taxable)
+	{
+		itemTaxable = taxable;
 	}
 
 	// Access Methods

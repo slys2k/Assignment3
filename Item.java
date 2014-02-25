@@ -7,6 +7,29 @@ package Assignment3;
   * 
   * @author K. Cyr, J. Ngo
   */
+  
+  /*####################*
+ 	*      Item				*
+	*####################*
+	*  -itemName			*
+	*	-itemQuantity		*
+	*	-itemPrice			*
+	*	-itemWeight			*
+	*####################*
+	*	-setName				*
+	*	-setQuantity		*
+	*	-setPrice			*
+	*	-setWeight			*
+	*	-getName				*
+	*	-getQuantity		*
+	*	-getPrice			*
+	*	-getWeight			*
+	*	-calcShipping		*
+	*	-calcTax				*
+	*	-calcPrice			*
+	*	-printAttributes	*
+	*####################*/
+	
 public class Item 
 {   
 	// Data Fields (instance variables)

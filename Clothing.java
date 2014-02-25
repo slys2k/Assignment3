@@ -7,6 +7,15 @@ package Assignment3;
   *
   * @author J. Ngo and K. Cyr
   */
+  
+  /*####################*
+ 	*    Clothing			*
+	*####################*
+	* 							*	
+	*####################*
+	*							*
+	*####################*/
+	
 public class Clothing extends Item
 {
    // Data Fields

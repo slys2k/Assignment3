@@ -7,6 +7,20 @@ package Assignment3;
   *
   * @author J. Ngo and K. Cyr
   */
+  
+  /*####################*
+ 	*    Grocery			*
+	*####################*
+	*  -itemPerishable	*	additional data field
+	*####################*
+	*	-setPerishable		*	new method
+	*	-getPerishable		*	new method
+	*	-calcShipping		*	overrides Item method
+	*	-calcTax				*	overrides Item method
+	*	-calcPrice			*	overrides Item method
+	*	-printAttributes	*	overrides Item method
+	*####################*/
+	
 public class Grocery extends Item
 {
    // Data Fields
@@ -54,7 +68,7 @@ public class Grocery extends Item
 	/** Designates the grocery item as perishable or not.
 	  * @param perishable True is the grocery item is perishable.
 	  */
-	public void setItemPerishable(boolean perishable)
+	public void setPerishable(boolean perishable)
 	{
 		itemPerishable = perishable;
 	}
@@ -64,7 +78,7 @@ public class Grocery extends Item
 	/** Checks the current setting of the perishable flag.
 	  * @return The current value of the perishableGrocery
 	  */
-	public boolean getItemPerishable() { return itemPerishable; }
+	public boolean getPerishable() { return itemPerishable; }
 
 	// Other Methods
 
@@ -75,24 +89,24 @@ public class Grocery extends Item
 	{
 		float shipping_cost = 0;
 		
-		// Insert Calculation Here
+		boolean perishable = getPerishable();
+		float weight = getWeight();
+		int quantity = getQuantity();
 		
 		shipping_cost = ((SHIPPING_RATE * weight) * quantity);
 
+		if(perishable)	// add premium shipping surcharge
+		{
+			shipping_cost = shipping_cost + (shipping_cost * PREMIUM_SHIPPING);
+		}
+		
 		return shipping_cost;
 	}
 	
 	/** Determines the cost associated with sales tax for this item.
 	  * @return The amount of sales tax. 
 	  */
-	float calcTax()
-	{
-		float tax_cost = 0;
-		
-		// Insert Calculation Here
-		
-		return tax_cost;
-	}
+	float calcTax() { return 0; }	// groceries currently incur no sales tax
 	
 	/** Determines the entire cost of this item.
 	  * @return The final price for this item.
@@ -101,7 +115,10 @@ public class Grocery extends Item
 	{
 		float final_price = 0;
 		
-		// Insert Calculation Here
+		float tax = calcTax();
+		float shipping = calcShipping();
+		int quantity = getQuantity();
+		float price = getPrice();
 		
 		final_price = (quantity * price) + tax + shipping;
 
