@@ -1,9 +1,11 @@
-/* Default Class Design */
-/* all multi-line comments are meant to be removed comments are meant to be 
- * removed */
-/* all single line comments and javadoc formatted comments are meant to remain */
+/* Default Class Design 
+ * All multi-line comments are meant to be removed comments are meant to be 
+ * removed.
+ * All single line comments and javadoc formatted comments are meant to remain.
+ */
+package classTemplate;
 
-Class newClass
+
 /** This class represents a ____________ 
   * The purpose of this class is to ____________
   *
@@ -13,17 +15,21 @@ public class newClass
 {
    // Data Fields
 	
-   /** This is what the first data field is. */
+   /** This is what the first data field is. 
+	  */
    private String firstDataField;
    
-   /** This is what the second data field is. */
+   /** This is what the second data field is. 
+	  */
    private int secondDataField;
    
    // Constants
 	
-   /** description of first constant */
+   /** description of first constant 
+	  */
    private static final int FIRST_CONSTANT = 0;
-   /** description of second constant */
+   /** description of second constant 
+	  */
    private static final int SECOND_CONSTANT = 0;
    
    // Constructors
