@@ -12,11 +12,16 @@ public class Electronics extends Item
 {
    // Data Fields
 	
-   /** This is a boolean flag set to indicate that the electronics item is a 
-	  * fragile good.
-	  */
-   private boolean itemFragile;
-   
+	   /** This is a boolean flag set to indicate that the electronics item is a 
+		  * fragile good.
+		  */
+	   private boolean itemFragile;
+
+	   /** This is a boolean flag set to indicate that the electronics item will 
+		  * be shipped to a state that has sales tax.
+		  */
+	   private boolean itemTaxable;
+
    // Constants
 
 	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
@@ -29,7 +34,7 @@ public class Electronics extends Item
 	  
 	/** Current premium shipping rate, in decimal format (e.g. 20% = .20)
 	  */
-	private static final float PREMIUM_SHIPPING = (float)  .20;
+	private static final float PREMIUM_SHIPPING = (float) .20;
 	  
    // Constructors
 
