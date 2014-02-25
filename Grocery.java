@@ -20,7 +20,7 @@ public class Grocery extends Item
 
 	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
-	private static final float TAX_RATE = .10;
+	private static final float TAX_RATE = (float) .10;
 	
 	/** Current shipping rate.
 	  */
@@ -28,7 +28,7 @@ public class Grocery extends Item
 	  
 	/** Current premium shipping rate, in decimal format (e.g. 20% = .20)
 	  */
-	private static final float PREMIUM_SHIPPING = .20;
+	private static final float PREMIUM_SHIPPING = (float) .20;
 	  
    // Constructors
 

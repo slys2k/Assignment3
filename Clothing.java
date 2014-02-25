@@ -18,7 +18,7 @@ public class Clothing extends Item
 
 	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
-	private static final float TAX_RATE = .10;
+	private static final float TAX_RATE = (float) .10;
 	
 	/** Current shipping rate.
 	  */
@@ -35,7 +35,7 @@ public class Clothing extends Item
 	public Clothing(String name, 
 					float price, 
 					int quantity, 
-					float weight, 
+					float weight) 
 	{
 		super(name, price, quantity, weight);
 	}

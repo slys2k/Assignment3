@@ -32,7 +32,7 @@ public class Item
 	
 	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
-	private static final float TAX_RATE = .10;
+	private static final float TAX_RATE = (float) .10;
 	
 	/** Current shipping rate.
 	  */
@@ -111,11 +111,11 @@ public class Item
 		float shipping_cost = 0;
 
 		float weight = getWeight();
-		int quantity = getQuantity;
+		int quantity = getQuantity();
 
-		shipping_cost = ((SHIPPING_RATE * weight) * quantity)
+		shipping_cost = ((SHIPPING_RATE * weight) * quantity);
 
-		return shipping_cost
+		return shipping_cost;
 	}
 	
 	/** Determines the cost associated with sales tax for this item.
@@ -125,10 +125,10 @@ public class Item
 	{
 		float tax_cost = 0;
 
-		int quantity = getQuantity;
-		float price = getPrice
+		int quantity = getQuantity();
+		float price = getPrice();
 
-		tax_cost = ((quantity * price) * TAX_RATE)
+		tax_cost = ((quantity * price) * TAX_RATE);
 
 		return tax_cost;
 	}
@@ -142,8 +142,8 @@ public class Item
 
 		float tax = calcTax();
 		float shipping = calcShipping();
-		int quantity = getQuantity;
-		float price = getPrice
+		int quantity = getQuantity();
+		float price = getPrice();
 		
 		final_price = (quantity * price) + tax + shipping;
 
