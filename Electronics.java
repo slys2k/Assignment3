@@ -190,7 +190,7 @@ public class Electronics extends Item
 								+ weight + "\n" + "This item is " + taxability 
 								+ ", so the taxes will be $" + tax + ".\n"
 								+ "This item is " + fragility 
-								+ ", and the shipping will cost $" + shipping 
+								+ ", so the shipping will cost $" + shipping 
 								+ ".\nThe total cost for this item is $" + total_cost 
 								+ ".\n\n");		
 	}
