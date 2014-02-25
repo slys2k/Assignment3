@@ -15,10 +15,15 @@ public class Clothing extends Item
 	  */
 	
    // Constants
-	
-	/** There are no constants yet defined for this class.
+
+	/** Current salex tax rate, in decimal format (e.g. 10% = .10)
 	  */
+	private static final int TAX_RATE = .10;
 	
+	/** Current shipping rate.
+	  */
+	private static final int SHIPPING_RATE = 20;
+	  
    // Constructors
 
 	/** Construct a clothing item with the following initial values.
