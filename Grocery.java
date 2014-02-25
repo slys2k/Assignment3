@@ -129,6 +129,25 @@ public class Grocery extends Item
 	  */
 	void printAttributes () 
 	{
-		//Print all applicable attributes of this class
+		String name = getName();
+		int quantity = getQuantity();
+		float price = getPrice();
+		float weight = getWeight();
+
+		float total_cost = calcPrice();
+		float tax = calcTax();
+		float shipping = calcShipping();
+		
+		boolean perishable = getPerishable();
+		String perishability = "not perishable";
+		if(perishable) { perishability = "perishable"; }
+		
+		System.out.println("Grocery\n" + "Name: " + name + " Qty: "
+								+ quantity + " Unit Price: " + price + " Weight: "
+								+ weight + "\n" + "Grocery items are not taxed.\n"
+								+ "This item is " + perishability 
+								+ ", so the shipping will cost $" + shipping 
+								+ ".\nThe total cost for this item is $" + total_cost 
+								+ ".\n\n");		
 	}
 }
