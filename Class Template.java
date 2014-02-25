@@ -5,7 +5,6 @@
  */
 package classTemplate;
 
-
 /** This class represents a ____________ 
   * The purpose of this class is to ____________
   *
