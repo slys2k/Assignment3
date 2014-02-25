@@ -36,11 +36,11 @@ public class Item
 	
 	/** Current shipping rate.
 	  */
-	  private static final int SHIPPING_RATE = 20;
+	private static final int SHIPPING_RATE = 20;
 	  
 	/** Current premium shipping rate, in decimal format (e.g. 20% = .20)
 	  */
-	  private static final int PREMIUM_SHIPPING = .20;
+	private static final int PREMIUM_SHIPPING = .20;
 	  
 	// Constructors
 
