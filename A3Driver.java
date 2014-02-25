@@ -1,6 +1,10 @@
 package Assignment3;
 
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class A3Driver
 {
@@ -8,8 +12,8 @@ public class A3Driver
 	{ 
 		if (args.length != 1) 
 		{
-			System.err.println ("Error: Incorrect number of command line" 
-									  "arguments");
+			System.err.println ("Error: Incorrect number of command line "
+					+ "arguments");
 			System.exit(-1);
 		}
 		processLinesInFile (args[0]);
@@ -23,12 +27,13 @@ public class A3Driver
 		{
 			FileReader freader = new FileReader(filename);
 			BufferedReader reader = new BufferedReader(freader);
-			
+			char opCode = 0;
 			for (String s = reader.readLine(); s != null; s = reader.readLine()) 
 			{
-				// parse input, get first portion
+				String[] input = s.split(" ");				// parse input, get first portion
+				opCode = input[0].charAt(0);
 			
-				switch(operation) // switch operations will further parse string s
+				switch(opCode) // switch operations will further parse string s
 										// to check for validity
 				{
 					case 'I': // insert
@@ -42,7 +47,7 @@ public class A3Driver
 					case 'P': // print
 						break;
 					default:
-						error(); // default on the switch is an error because falling 
+//					error(); // default on the switch is an error because falling 
 									// through the switch indicates that the first part 
 									// of the input line was incorrect
 
