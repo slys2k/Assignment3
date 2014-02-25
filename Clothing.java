@@ -115,6 +115,20 @@ public class Clothing extends Item
 	  */
 	void printAttributes () 
 	{
-		//Print all applicable attributes of this class
+		String name = getName();
+		int quantity = getQuantity();
+		float price = getPrice();
+		float weight = getWeight();
+
+		float total_cost = calcPrice();
+		float tax = calcTax();
+		float shipping = calcShipping();
+
+		System.out.println("Clothing\n" + "Name: " + name + " Qty: "
+								+ quantity + " Unit Price: " + price + " Weight: "
+								+ weight + "\n" + "This item will be taxed $" + tax 
+								+ ".\n" + "The shipping will cost $" + shipping 
+								+ ".\nThe total cost for this item is $" + total_cost 
+								+ ".\n\n");		
 	}
 }
