@@ -11,9 +11,12 @@ package Assignment3;
   /*####################*
  	*    Clothing			*
 	*####################*
-	* 							*	
+	* 							*	no additional data fields	
 	*####################*
-	*							*
+	*	-calcShipping		*	overrides Item method
+	*	-calcTax				*	overrides Item method
+	*	-calcPrice			*	overrides Item method
+	*	-printAttributes	*	overrides Item method
 	*####################*/
 	
 public class Clothing extends Item
@@ -64,7 +67,7 @@ public class Clothing extends Item
 	/** Determines the cost associated with shipping this item.
 	  * @return The shipping cost. 
 	  */
-	float calcShipping()
+	float calcShipping() // premium shipping not available
 	{
 		float shipping_cost = 0;
 
