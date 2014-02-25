@@ -23,7 +23,7 @@ public class Grocery extends Item
 	
    // Constructors
 
-	/** Construct an Item with the following initial values.
+	/** Construct an grocery item with the following initial values.
 	  * @param name The name of the item.
 	  * @param price The price assigned to one unit of this item.
 	  * @param quantity How many of these items will be purchased.
