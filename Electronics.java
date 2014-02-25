@@ -106,10 +106,17 @@ public class Electronics extends Item
 	{
 		float shipping_cost = 0;
 		
-		// Insert Calculation Here
+		boolean fragile = getFragile);
+		float weight = getWeight();
+		int quantity = getQuantity();
 		
 		shipping_cost = ((SHIPPING_RATE * weight) * quantity);
 
+		if(fragile)	// add premium shipping surcharge
+		{
+			shipping_cost = shipping_cost + (shipping_cost * PREMIUM_SHIPPING);
+		}
+		
 		return shipping_cost;
 	}
 	
@@ -120,8 +127,15 @@ public class Electronics extends Item
 	{
 		float tax_cost = 0;
 		
-		// Insert Calculation Here
+		boolean taxable = getTaxable();
 		
+		if(taxable) // calculate the tax
+		{
+			int quantity = getQuantity();
+			float price = getPrice();
+
+			tax_cost = ((quantity * price) * TAX_RATE);
+		}
 		return tax_cost;
 	}
 	
@@ -132,15 +146,17 @@ public class Electronics extends Item
 	{
 		float final_price = 0;
 		
-		// Insert Calculation Here
+		float tax = calcTax();
+		float shipping = calcShipping();
+		int quantity = getQuantity();
+		float price = getPrice();
 		
 		final_price = (quantity * price) + tax + shipping;
 
 		return final_price;
 	}
 
-	/** Determines the weight assigned to one of these items.
-	  * @return The weight per each. 
+	/** 
 	  */
 	void printAttributes () 
 	{

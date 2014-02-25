@@ -173,8 +173,7 @@ public class Item
 		return final_price;
 	}
 
-	/** Determines the weight assigned to one of these items.
-	  * @return The weight per each. 
+	/** 
 	  */
 	void printAttributes () 
 	{
