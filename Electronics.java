@@ -168,6 +168,30 @@ public class Electronics extends Item
 	  */
 	void printAttributes () 
 	{
-		//Print all applicable attributes of this class
+		String name = getName();
+		int quantity = getQuantity();
+		float price = getPrice();
+		float weight = getWeight();
+
+		float total_cost = calcPrice();
+		float tax = calcTax();
+		float shipping = calcShipping();
+		
+		boolean fragile = getFragile();
+		String fragility = "not fragile";
+		if(fragile) { fragility = "fragile"; }
+		
+		boolean taxable = getTaxable();
+		String taxability = "not taxable";
+		if(taxable) { taxability = "taxable"; }
+		
+		System.out.println("Electronics\n" + "Name: " + name + " Qty: "
+								+ quantity + " Unit Price: " + price + " Weight: "
+								+ weight + "\n" + "This item is " + taxability 
+								+ ", so the taxes will be $" + tax + ".\n"
+								+ "This item is " + fragility 
+								+ ", and the shipping will cost $" + shipping 
+								+ ".\nThe total cost for this item is $" + total_cost 
+								+ ".\n\n");		
 	}
 }
