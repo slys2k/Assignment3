@@ -8,6 +8,13 @@ import java.io.IOException;
 
 public class A3Driver
 {
+	private static int qty = 0;
+	private static float price = 0;
+	private static float weight = 0;
+	private static String name = null;
+	private static String option1 = null;
+	private static String Option2 = null;
+
 	public static void main(String[] args) 
 	{ 
 		if (args.length != 1) 
@@ -30,7 +37,6 @@ public class A3Driver
 			
 			for (String s = reader.readLine(); s != null; s = reader.readLine()) 
 			{
-<<<<<<< HEAD
 				ArrayList<Item> cart = new ArrayList<Item>(); 
 
 				String[] input = s.split(" ");				// parse input, get first portion
@@ -43,15 +49,15 @@ public class A3Driver
 						char type = itemType;
 						if(type == 'C')
 						{
-							temp = new Clothing(name, price, quantity, weight);
+							temp = new Clothing(name, price, qty, weight);
 						}
 						if(type == 'G')
 						{
-							temp = new Grocery(name, price, quantity, weight, perishable);
+							temp = new Grocery(name, price, qty, weight, perishable);
 						}
 						if(type == 'E')
 						{
-							temp = new Electronics(name, price, quantity, weight, fragile, taxable);
+							temp = new Electronics(name, price, qty, weight, fragile, taxable);
 						}
 						cart.add(temp);
 						break;
@@ -74,9 +80,8 @@ public class A3Driver
 				// each switch statement will handle the individual command
 				
 				// print command will handle the sort action prior to printing
-=======
+
 				String shopping = A3Driver.shopping(s);				
->>>>>>> 1724367a320451fda663695f27b7496ae96e588f
 			}
 		} 
 		catch (FileNotFoundException e) 
@@ -97,10 +102,6 @@ public class A3Driver
 	{
 		char opCode = 0;
 		String cat = "";
-		String name = "";
-		double price = 0;
-		int qty = 0;
-		double weight = 0;
 		String of1 = "";
 		String of2 = "";
 		String[] input = s.split(" ");				// parse input, get first portion
