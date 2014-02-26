@@ -30,6 +30,8 @@ public class A3Driver
 			char opCode = 0;
 			for (String s = reader.readLine(); s != null; s = reader.readLine()) 
 			{
+				ArrayList<Item> cart = new ArrayList<Item>(); 
+
 				String[] input = s.split(" ");				// parse input, get first portion
 				opCode = input[0].charAt(0);
 			
@@ -37,6 +39,20 @@ public class A3Driver
 										// to check for validity
 				{
 					case 'I': // insert
+						char type = itemType;
+						if(type == 'C')
+						{
+							temp = new Clothing(name, price, quantity, weight);
+						}
+						if(type == 'G')
+						{
+							temp = new Grocery(name, price, quantity, weight, perishable);
+						}
+						if(type == 'E')
+						{
+							temp = new Electronics(name, price, quantity, weight, fragile, taxable);
+						}
+						cart.add(temp);
 						break;
 					case 'S': // search
 						break;
@@ -73,8 +89,6 @@ public class A3Driver
 		}
 	}
 		
-		//Stub for arraylist.
-		ArrayList<Item> shoppingCart = new ArrayList<Item>(); 
 		
 		// General code example for how to iterate an array list. You will have to modify this heavily, to suit your needs.
 		Iterator<Item> i = shoppingCart.iterator();
