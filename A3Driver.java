@@ -12,10 +12,8 @@ public class A3Driver
 	private static float price = 0;
 	private static float weight = 0;
 	private static String name = null;
-	private static boolean fragile = false;
-	private static boolean taxable = true;
-	private static boolean perishable = false;
-	private static char opCode = ' ';
+	private static String option1 = null;
+	private static String Option2 = null;
 
 	public static void main(String[] args) 
 	{ 
@@ -48,6 +46,7 @@ public class A3Driver
 										// to check for validity
 				{
 					case 'I': // insert
+						char type = itemType;
 						if(type == 'C')
 						{
 							temp = new Clothing(name, price, qty, weight);
@@ -101,6 +100,7 @@ public class A3Driver
 	
 	public static String shopping (String s)
 	{
+		char opCode = 0;
 		String cat = "";
 		String of1 = "";
 		String of2 = "";
@@ -117,38 +117,23 @@ public class A3Driver
 				qty = Integer.parseInt(input[4]);
 				weight = Integer.parseInt(input[5]);
 			}
-			else if(cat == "electronics")
+			if(cat == "electronics")
 			{						
 				name = input[2];
 				price = Integer.parseInt(input[3]);
 				qty = Integer.parseInt(input[4]);
 				weight = Integer.parseInt(input[5]);
-
-				if(input[6] == "F")
-				{
-					fragile = true;
-				}
-				
-				if(input[7] == "TX" || input[7] == "NM" || input[7] == "VA" 
-						|| input[7] == "AZ" || input[7] == "AK");
-				{
-					taxable = false;
-				}
+				of1 = input[6];
+				of2 = input[7];
 			}
-
-			else if(cat == "groceries")
+			if(cat == "groceries")
 			{
 				name = input[2];
 				price = Integer.parseInt(input[3]);
 				qty = Integer.parseInt(input[4]);
 				weight = Integer.parseInt(input[5]);
-
-				if(input[6] == "P")
-				{
-					perishable = true;
-				}
+				of1 = input[6];						
 			}
-
 			else error();
 		}
 		else if(input[0] == "search")
